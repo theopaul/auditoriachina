@@ -11,23 +11,35 @@ Esta landing page foi criada para promover os serviços de auditoria de fábrica
 - HTML5
 - CSS3
 - JavaScript
-- Integração com HubSpot (preparada para implementação)
+- Integração com HubSpot (implementada)
 
 ## Estrutura do Projeto
 
 ```
 auditoriachina/
-├── index.html         # Página principal
-├── styles.css         # Folha de estilos
-├── scripts.js         # JavaScript
-├── icons/             # Pasta com ícones SVG
+├── index.html             # Página principal
+├── styles.css             # Folha de estilos
+├── scripts.js             # JavaScript
+├── icons/                 # Pasta com ícones SVG
 │   ├── whatsapp.svg
 │   ├── email.svg
 │   ├── phone.svg
 │   └── ...
-├── images/            # Pasta para imagens (a ser adicionada)
-└── README.md          # Este arquivo
+├── optimized_photos/      # Pasta com imagens otimizadas
+│   ├── auditoria-logo-rectangular.png
+│   ├── auditoria-china-logo-square.png
+│   ├── auditoria-china-fabricas-1.png
+│   └── ...
+└── README.md              # Este arquivo
 ```
+
+## Atualizações Recentes
+
+- Remoção do texto "Auditoria China" ao lado do logo no cabeçalho
+- Adição de filtro para deixar o logo do rodapé branco
+- Atualização das imagens dos serviços e hero section
+- Adição de informações da empresa no rodapé (CNPJ, endereço e telefone)
+- Integração com formulário HubSpot
 
 ## Instruções para Desenvolvimento
 
@@ -48,16 +60,17 @@ git clone https://github.com/theopaul/auditoriachina.git
 
 ## Integração com HubSpot
 
-Para integrar o formulário de contato com o HubSpot:
+O formulário de contato já está integrado com HubSpot:
 
-1. Crie um formulário no HubSpot e obtenha o Portal ID e Form ID.
-
-2. No arquivo `index.html`, localize a tag `<form>` e atualize o atributo `action` com os IDs corretos:
+1. O script do HubSpot está carregado no final da página:
 ```html
-<form id="contactForm" action="https://api.hsforms.com/submissions/v3/integration/submit/YOUR_PORTAL_ID/YOUR_FORM_ID" method="post">
+<script src="https://js.hsforms.net/forms/embed/48921096.js" defer></script>
 ```
 
-3. No arquivo `scripts.js`, descomente e configure a função `sendToHubspot()` com os IDs corretos.
+2. O formulário é carregado no div com a classe `hs-form-frame`:
+```html
+<div class="hs-form-frame" data-region="na1" data-form-id="8b0c61e0-ced4-4b00-86b9-e2c0bfad69b6" data-portal-id="48921096"></div>
+```
 
 ## Contato
 
