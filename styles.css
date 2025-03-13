@@ -466,6 +466,7 @@ footer {
 .logo-footer {
     width: 80px;
     margin-bottom: 15px;
+    filter: brightness(0) invert(1);
 }
 
 .footer-links h3,
@@ -535,6 +536,30 @@ footer {
 
 .footer-bottom a {
     color: var(--white);
+}
+
+/* Company Information in Footer */
+.company-info {
+    margin-top: 20px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.85rem;
+    color: #999;
+    line-height: 1.5;
+}
+
+.company-info p {
+    margin-bottom: 5px;
+}
+
+.company-info a {
+    color: #999;
+    text-decoration: none;
+}
+
+.company-info a:hover {
+    color: var(--white);
+    text-decoration: underline;
 }
 
 /* Responsividade */
@@ -621,6 +646,10 @@ footer {
     .service-card {
         margin-bottom: 20px;
     }
+    
+    .company-info {
+        font-size: 0.75rem;
+    }
 }
 
 /* Gallery Section */
@@ -689,5 +718,38 @@ footer {
     
     .gallery-item img {
         height: 200px;
+    }
+}
+
+/* HubSpot Form Styling */
+.contact-form {
+    background-color: var(--light-gray);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.hs-form-frame {
+    width: 100%;
+    min-height: 500px;
+}
+
+.hs-form {
+    font-family: 'Manrope', sans-serif !important;
+}
+
+.hs-button {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.hs-button:hover {
+    background-color: var(--primary-dark) !important;
+    border-color: var(--primary-dark) !important;
+}
+
+/* Make sure HubSpot form is mobile responsive */
+@media (max-width: 768px) {
+    .hs-form-frame {
+        min-height: 550px;
     }
 }
